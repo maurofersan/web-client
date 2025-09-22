@@ -7,3 +7,5 @@ export const routes: Routes = [
   { path: 'summary', component: LoanSummaryComponent },
   { path: '', redirectTo: 'installments', pathMatch: 'full' },
 ];
+
+export const RemoteModule = routes;
