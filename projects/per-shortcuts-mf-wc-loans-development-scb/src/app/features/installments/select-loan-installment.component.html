@@ -1,0 +1,12 @@
+<div class="loan-installment">
+  <h2 class="loan-installment__title">Select Your Installment</h2>
+  <ul class="loan-installment__list">
+    <li
+      *ngFor="let installment of installments"
+      class="loan-installment__item"
+      (click)="selectInstallment(installment)"
+    >
+      {{ installment }} months
+    </li>
+  </ul>
+</div>

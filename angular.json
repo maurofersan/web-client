@@ -1,0 +1,673 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"cli": {
+		"packageManager": "npm"
+	},
+	"newProjectRoot": "projects",
+	"projects": {
+		"per-shortcuts-mf-wc-shell-development-scb": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss",
+					"skipTests": true
+				},
+				"@schematics/angular:class": {
+					"skipTests": true
+				},
+				"@schematics/angular:directive": {
+					"skipTests": true
+				},
+				"@schematics/angular:guard": {
+					"skipTests": true
+				},
+				"@schematics/angular:interceptor": {
+					"skipTests": true
+				},
+				"@schematics/angular:pipe": {
+					"skipTests": true
+				},
+				"@schematics/angular:resolver": {
+					"skipTests": true
+				},
+				"@schematics/angular:service": {
+					"skipTests": true
+				}
+			},
+			"root": "projects/per-shortcuts-mf-wc-shell-development-scb",
+			"sourceRoot": "projects/per-shortcuts-mf-wc-shell-development-scb/src",
+			"prefix": "shell",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/per-shortcuts-mf-wc-shell-development-scb",
+						"index": "projects/per-shortcuts-mf-wc-shell-development-scb/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-shell-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-shell-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-shell-development-scb/src/styles.scss"
+						],
+						"scripts": [],
+						"main": "projects/per-shortcuts-mf-wc-shell-development-scb/src/main.ts",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "per-shortcuts-mf-wc-shell-development-scb:build:production",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "per-shortcuts-mf-wc-shell-development-scb:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4200,
+						"publicHost": "http://localhost:4200",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "per-shortcuts-mf-wc-shell-development-scb:build",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-shell-development-scb/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-shell-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-shell-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-shell-development-scb/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+		},
+		"per-shortcuts-mf-wc-onboarding-development-scb": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss",
+					"skipTests": true
+				},
+				"@schematics/angular:class": {
+					"skipTests": true
+				},
+				"@schematics/angular:directive": {
+					"skipTests": true
+				},
+				"@schematics/angular:guard": {
+					"skipTests": true
+				},
+				"@schematics/angular:interceptor": {
+					"skipTests": true
+				},
+				"@schematics/angular:pipe": {
+					"skipTests": true
+				},
+				"@schematics/angular:resolver": {
+					"skipTests": true
+				},
+				"@schematics/angular:service": {
+					"skipTests": true
+				}
+			},
+			"root": "projects/per-shortcuts-mf-wc-onboarding-development-scb",
+			"sourceRoot": "projects/per-shortcuts-mf-wc-onboarding-development-scb/src",
+			"prefix": "onboarding",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/per-shortcuts-mf-wc-onboarding-development-scb",
+						"index": "projects/per-shortcuts-mf-wc-onboarding-development-scb/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-onboarding-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-onboarding-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-onboarding-development-scb/src/styles.scss"
+						],
+						"scripts": [],
+						"main": "projects/per-shortcuts-mf-wc-onboarding-development-scb/src/main.ts",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "per-shortcuts-mf-wc-onboarding-development-scb:build:production",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "per-shortcuts-mf-wc-onboarding-development-scb:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4201,
+						"publicHost": "http://localhost:4201",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "per-shortcuts-mf-wc-onboarding-development-scb:build",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-onboarding-development-scb/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-onboarding-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-onboarding-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-onboarding-development-scb/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+		},
+		"per-shortcuts-mf-wc-otp-development-scb": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss",
+					"skipTests": true
+				},
+				"@schematics/angular:class": {
+					"skipTests": true
+				},
+				"@schematics/angular:directive": {
+					"skipTests": true
+				},
+				"@schematics/angular:guard": {
+					"skipTests": true
+				},
+				"@schematics/angular:interceptor": {
+					"skipTests": true
+				},
+				"@schematics/angular:pipe": {
+					"skipTests": true
+				},
+				"@schematics/angular:resolver": {
+					"skipTests": true
+				},
+				"@schematics/angular:service": {
+					"skipTests": true
+				}
+			},
+			"root": "projects/per-shortcuts-mf-wc-otp-development-scb",
+			"sourceRoot": "projects/per-shortcuts-mf-wc-otp-development-scb/src",
+			"prefix": "otp",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/per-shortcuts-mf-wc-otp-development-scb",
+						"index": "projects/per-shortcuts-mf-wc-otp-development-scb/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-otp-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-otp-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-otp-development-scb/src/styles.scss"
+						],
+						"scripts": [],
+						"main": "projects/per-shortcuts-mf-wc-otp-development-scb/src/main.ts",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "per-shortcuts-mf-wc-otp-development-scb:build:production",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "per-shortcuts-mf-wc-otp-development-scb:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4202,
+						"publicHost": "http://localhost:4202",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "per-shortcuts-mf-wc-otp-development-scb:build",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-otp-development-scb/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-otp-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-otp-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-otp-development-scb/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+		},
+		"per-shortcuts-mf-wc-loans-development-scb": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss",
+					"skipTests": true
+				},
+				"@schematics/angular:class": {
+					"skipTests": true
+				},
+				"@schematics/angular:directive": {
+					"skipTests": true
+				},
+				"@schematics/angular:guard": {
+					"skipTests": true
+				},
+				"@schematics/angular:interceptor": {
+					"skipTests": true
+				},
+				"@schematics/angular:pipe": {
+					"skipTests": true
+				},
+				"@schematics/angular:resolver": {
+					"skipTests": true
+				},
+				"@schematics/angular:service": {
+					"skipTests": true
+				}
+			},
+			"root": "projects/per-shortcuts-mf-wc-loans-development-scb",
+			"sourceRoot": "projects/per-shortcuts-mf-wc-loans-development-scb/src",
+			"prefix": "loans",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/per-shortcuts-mf-wc-loans-development-scb",
+						"index": "projects/per-shortcuts-mf-wc-loans-development-scb/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-loans-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-loans-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-loans-development-scb/src/styles.scss"
+						],
+						"scripts": [],
+						"main": "projects/per-shortcuts-mf-wc-loans-development-scb/src/main.ts",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "per-shortcuts-mf-wc-loans-development-scb:build:production",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "per-shortcuts-mf-wc-loans-development-scb:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4203,
+						"publicHost": "http://localhost:4203",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "per-shortcuts-mf-wc-loans-development-scb:build",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-loans-development-scb/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-loans-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-loans-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-loans-development-scb/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+		},
+		"per-shortcuts-mf-wc-identity-development-scb": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss",
+					"skipTests": true
+				},
+				"@schematics/angular:class": {
+					"skipTests": true
+				},
+				"@schematics/angular:directive": {
+					"skipTests": true
+				},
+				"@schematics/angular:guard": {
+					"skipTests": true
+				},
+				"@schematics/angular:interceptor": {
+					"skipTests": true
+				},
+				"@schematics/angular:pipe": {
+					"skipTests": true
+				},
+				"@schematics/angular:resolver": {
+					"skipTests": true
+				},
+				"@schematics/angular:service": {
+					"skipTests": true
+				}
+			},
+			"root": "projects/per-shortcuts-mf-wc-identity-development-scb",
+			"sourceRoot": "projects/per-shortcuts-mf-wc-identity-development-scb/src",
+			"prefix": "identity",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/per-shortcuts-mf-wc-identity-development-scb",
+						"index": "projects/per-shortcuts-mf-wc-identity-development-scb/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-identity-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-identity-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-identity-development-scb/src/styles.scss"
+						],
+						"scripts": [],
+						"main": "projects/per-shortcuts-mf-wc-identity-development-scb/src/main.ts",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "per-shortcuts-mf-wc-identity-development-scb:build:production",
+							"extraWebpackConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "per-shortcuts-mf-wc-identity-development-scb:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4204,
+						"publicHost": "http://localhost:4204",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "per-shortcuts-mf-wc-identity-development-scb:build",
+						"extraWebpackConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/per-shortcuts-mf-wc-identity-development-scb/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/per-shortcuts-mf-wc-identity-development-scb/src/favicon.ico",
+							"projects/per-shortcuts-mf-wc-identity-development-scb/src/assets"
+						],
+						"styles": [
+							"projects/per-shortcuts-mf-wc-identity-development-scb/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+    },
+    "shared-contracts": {
+      "projectType": "library",
+      "root": "projects/shared-contracts",
+      "sourceRoot": "projects/shared-contracts/src",
+      "prefix": "shared",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/shared-contracts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/shared-contracts/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/shared-contracts/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/shared-contracts/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+	}
+}
