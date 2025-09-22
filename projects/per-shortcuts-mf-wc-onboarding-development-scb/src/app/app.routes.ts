@@ -6,3 +6,5 @@ export const routes: Routes = [
     loadComponent: () => import('./app.component').then((m) => m.AppComponent),
   },
 ];
+
+export const RemoteModule = routes;
