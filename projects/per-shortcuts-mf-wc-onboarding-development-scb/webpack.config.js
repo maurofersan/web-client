@@ -4,8 +4,7 @@ const {
 } = require("@angular-architects/module-federation/webpack");
 
 module.exports = withModuleFederationPlugin({
-  name: "per-shortcuts-mf-wc-onboarding-development-scb",
-
+  name: "onboarding",
   exposes: {
     "./Module":
       "./projects/per-shortcuts-mf-wc-onboarding-development-scb/src/app/app.routes.ts",
