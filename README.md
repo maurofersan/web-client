@@ -63,23 +63,56 @@ Advanced options later: shared event bus, backend persistence, NgRx/Signals per 
 
 - SCSS with BEM, styles scoped per component.
 
-Example (Loans MFE):
+## Project Structure
 
-```scss
-.loan-installment {
-  &__title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  &__list {
-    list-style: none;
-    padding: 0;
-  }
-  &__item {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-  }
-}
+```
+mfe-onboarding/
+├── src/
+│   ├── app/
+│   │   ├── core/                # Global services of this MFE
+│   │   │   ├── interceptors/
+│   │   │   ├── guards/
+│   │   │   ├── services/
+│   │   │   │   ├── api.service.ts
+│   │   │   │   ├── text.service.ts   # Handles texts (API + fallback)
+│   │   │   │   └── ...
+│   │   │   └── core.module.ts
+│   │   │
+│   │   ├── features/            # Features/pages of the MFE
+│   │   │   └── onboarding/
+│   │   │       ├── components/
+│   │   │       ├── pages/
+│   │   │       │   ├── onboarding.page.ts
+│   │   │       │   └── onboarding.page.html
+│   │   │       ├── services/
+│   │   │       ├── store/       # Local state (ngrx or custom reducer)
+│   │   │       └── onboarding.module.ts
+│   │   │
+│   │   ├── shared/              # Reusable components & pipes within this MFE
+│   │   │   ├── components/
+│   │   │   ├── directives/
+│   │   │   └── pipes/
+│   │   │
+│   │   ├── app-routing.module.ts
+│   │   └── app.module.ts
+│   │
+│   ├── assets/
+│   │   └── i18n/                # Fallback texts
+│   │       ├── es.json
+│   │       ├── en.json
+│   │       └── ...
+│   │
+│   ├── environments/            # Environment-specific configurations
+│   │   ├── environment.ts
+│   │   ├── environment.dev.ts
+│   │   └── environment.prod.ts
+│   │
+│   └── index.html
+│
+├── module-federation.config.js  # MFE configuration
+├── tailwind.config.js           # (if using Tailwind)
+├── angular.json
+└── package.json
 ```
 
 ### Scripts
